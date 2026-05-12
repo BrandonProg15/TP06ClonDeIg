@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Feed from './feed.jsx'
+import PostCard from './PostCard.jsx'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <Feed />
+      <Routes>
+        <Route path="/" element={<Feed />} />
+        <Route path="/postcard" element={<PostCard />} />
+      </Routes>
     </div>
   )
 }

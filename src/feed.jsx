@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css'
+import { useNavigate } from 'react-router-dom'
 
 function Feed() {
+    const navigate = useNavigate();
     const [publicaciones, setPublicaciones] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -29,16 +31,25 @@ function Feed() {
 
             {loading && <p>Buscando resultados...</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            {publicaciones.map((post) => (<button onClick={() => navigate(`/PostCard/${post.id}`)}> <img
-                key={post.id}
-                src={post.url}
-                alt="gato"
-                style={{ width: '400px', height: '400px', objectFit: 'cover' }}
-            /></button>
 
+            {publicaciones.map((post) => (
+                <button
+                    key={post.id}
+                    onClick={() =>
+                        navigate('/postcard', {
+                            state: { url: post.url }
+                        })
+                    }
+                >
+                    <img
+                        src={post.url}
+                        alt="gato"
+                        style={{ width: '400px', height: '400px', objectFit: 'cover' }}
+                    />
+                </button>
             ))}
-
         </div>
+        
     );
 }
 
