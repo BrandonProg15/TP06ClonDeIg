@@ -27,7 +27,7 @@ function Feed() {
 
     return (
         <div>
-              <button className="boton-usuario" onClick={() => navigate('/usuario')}>usuario</button>
+            <button className="boton-usuario" onClick={() => navigate('/usuario')}>usuario</button>
             <h2>Feed</h2>
             {loading && <p>Buscando resultados...</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -35,7 +35,7 @@ function Feed() {
                 <button
                     key={post.id}
                     onClick={() =>
-                        navigate('/postcard', {
+                        navigate(`/postcard/${post.id}`, {
                             state: { url: post.url }
                         })
                     }
