@@ -1,0 +1,107 @@
+/* =========================
+   FEED
+========================= */
+
+.feed-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.feed-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.boton-usuario {
+  background: linear-gradient(135deg, #ff3cac, #784ba0);
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.boton-usuario:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================
+   GRID POSTS
+========================= */
+
+.feed-grid {
+  columns: 3 250px;
+  column-gap: 20px;
+}
+
+.feed-post {
+  width: 100%;
+  border: none;
+  background: transparent;
+  margin-bottom: 20px;
+  cursor: pointer;
+  break-inside: avoid;
+}
+
+.feed-post img {
+  width: 100%;
+  border-radius: 22px;
+  object-fit: cover;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.feed-post:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #c4bfff;
+}
+
+.error {
+  color: #ff5d73;
+  margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .feed-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .feed-grid {
+    columns: 1;
+  }
+
+  .feed-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feed-header h2 {
+    font-size: 30px;
+  }
+}

@@ -1,4 +1,4 @@
-import './index.css'
+import './usuario.css'
 
 function Usuario() {
     const usuario = {

@@ -1,0 +1,64 @@
+.perfil {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #120d2e;
+  padding: 30px;
+  border-radius: 24px;
+}
+
+.perfil-foto {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.perfil-header h2 {
+  margin-bottom: 10px;
+}
+
+.perfil-header p {
+  color: #c7c2e7;
+}
+
+.perfil-header button {
+  margin-left: auto;
+  background: linear-gradient(135deg, #ff3cac, #784ba0);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.perfil-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  background: #120d2e;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.perfil-posts {
+  columns: 3 250px;
+  column-gap: 20px;
+}
+
+.perfil-posts img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.perfil-posts img:hover {
+  transform: scale(1.03);
+}

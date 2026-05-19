@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './index.css'
+import './feed.css'
 import { useNavigate } from 'react-router-dom'
+import Historias from './Historias';
 
 function Feed() {
     const navigate = useNavigate();
@@ -28,7 +29,8 @@ function Feed() {
     return (
         <div>
             <button className="boton-usuario" onClick={() => navigate('/usuario')}>usuario</button>
-            <h2>Feed</h2>
+            <Historias />
+            <h2 style={{ color: '#ffffff' }}>Feed</h2>
             {loading && <p>Buscando resultados...</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {publicaciones.map((post) => (

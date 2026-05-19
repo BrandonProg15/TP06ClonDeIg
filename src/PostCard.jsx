@@ -1,4 +1,4 @@
-import './index.css'
+import './PostCard.css'
 import { useLocation, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
