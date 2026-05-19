@@ -1,16 +1,21 @@
-# React + Vite
+Dentro del README deberán explicar:
+- Cómo organizaron el proyecto.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Usamos como base el tp anterior de peliculas, inspirandonos de su sintaxis para poder acordarnos de la sintaxis y sus funciones con algunos cambios y una vez que tuvimos las funciones del proyecto funcionando comenzamos a crear y conectar todos los css. De todas formas, no negamos que pedimos un poco de ayuda a la IA, para por ejemplo, como hacer que la api solo nos diera 10 imagenes y como hacer para que se envie correctamente una informacion específica a otra view.  
+- Qué componentes crearon.
+App.jsx/css, feed.jsx/css, Header.jsx/css, PostCard.jsx/css, usuario.jsx/css
+- Qué responsabilidad tiene cada componente.
+- Por qué decidieron componentizar de esa manera.
+- Cómo se comunican los componentes mediante props.
+- Qué hooks utilizaron y para qué.
+- Qué diseño de Figma utilizaron como referencia.
 
-Currently, two official plugins are available:
+- Cómo resolvieron la visualización individual de publicaciones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-  Cómo simularon el perfil de usuario logueado.
 
-## React Compiler
+-  Qué datos decidieron mostrar en el perfil.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-  Qué estados utilizaron para seleccionar publicaciones o manejar la vista individual.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+La explicación debe justificar técnicamente la existencia de los componentes creados.

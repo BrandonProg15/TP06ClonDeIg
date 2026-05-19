@@ -13,7 +13,7 @@ function Historias() {
         setLoading(true);
 
         axios
-            .get('https://api.thecatapi.com/v1/images/search?limit=10')
+            .get('https://api.thecatapi.com/v1/images/search?limit=15')
             .then((response) => {
                 setPublicaciones(response.data);
                 setLoading(false);

@@ -1,0 +1,124 @@
+:root {
+    --bg-start: #0b1220;
+    --bg-end: #1b2340;
+    --muted: #a8b3c7;
+    --accent1: #ff7a59;
+    --accent2: #7c3aed;
+}
+
+.perfil {
+    width: 280px;
+    background:
+        radial-gradient(circle at top left, #1b1240, transparent 40%),
+        radial-gradient(circle at bottom right, #2b0f4f, transparent 40%),
+        #07051b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(11, 15, 30, 0.6);
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    position: sticky;
+    top: 20px;
+}
+
+.perfilHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.perfilFoto {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 3px;
+    /* ring space */
+    background: conic-gradient(from 120deg at 50% 50%, var(--accent1), var(--accent2), #3b82f6);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.perfilHeader h2 {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
+.perfilHeader h2+p {
+    margin: 2px 0 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.perfilStats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.perfilStats p {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #e6eef8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfilStats p strong {
+    display: inline-block;
+    min-width: 56px;
+    text-align: left;
+}
+
+.botonesRaros {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.botonesRaros button {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.botonesRaros button:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    transform: translateX(4px);
+}
+
+/* Responsive: hide sticky behavior on very small widths */
+@media (max-width:640px) {
+    .perfil {
+        position: relative;
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+.botonHome {}
+
+.botonExplore {}
+
+.botonReels {}
+
+.botonIGTV {}
+
+.botonNotification {}
+
+.botonPerfil {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

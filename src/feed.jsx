@@ -3,6 +3,7 @@ import axios from 'axios';
 import './feed.css'
 import { useNavigate } from 'react-router-dom'
 import Historias from './Historias';
+import UsuarioInfo from './usuarioInfo';
 
 function Feed() {
     const navigate = useNavigate();
@@ -10,11 +11,9 @@ function Feed() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const API_KEY = 'live_zQKcnB78r9h1dcWGnreA1sdCyUiUdCw5lFcOSeyhaV5WLyaZxHzm4WQZeZ5pRrJH';
-
     useEffect(() => {
         setLoading(true);
-        axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&api_key=live_zQKcnB78r9h1dcWGnreA1sdCyUiUdCw5lFcOSeyhaV5WLyaZxHzm4WQZeZ5pRrJH`)
+        axios.get(`https://api.thecatapi.com/v1/images/search?limit=10`)
             .then((response) => {
                 setPublicaciones(response.data);
                 setError(null);
@@ -27,30 +26,33 @@ function Feed() {
     }, []);
 
     return (
-        <div>
-            <button className="boton-usuario" onClick={() => navigate('/usuario')}>usuario</button>
-            <Historias />
-            <h2 style={{ color: '#ffffff' }}>Feed</h2>
-            {loading && <p>Buscando resultados...</p>}
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            {publicaciones.map((post) => (
-                <button
-                    key={post.id}
-                    onClick={() =>
-                        navigate(`/postcard/${post.id}`, {
-                            state: { url: post.url }
-                        })
-                    }
-                >
-                    <img
-                        src={post.url}
-                        alt="gato"
-                        style={{ width: '400px', height: '400px', objectFit: 'cover' }}
-                    />
-                </button>
-            ))}
-        </div>
+        <div className="feed-container">
+            <div className="historias"> <Historias /></div>
+            <div className="usuarioInfo">
+                <UsuarioInfo />
+            </div>
+            {loading && <p className="loading">Buscando resultados...</p>}
+            {error && <p className="error">{error}</p>}
 
+            <div className="feed-grid">
+                {publicaciones.map((post) => (
+                    <button
+                        key={post.id}
+                        className="feed-post"
+                        onClick={() =>
+                            navigate(`/postcard/${post.id}`, { state: { url: post.url } })
+                        }
+                    >
+                        <img
+                            src={post.url}
+                            alt="gato"
+                        />
+                    </button>
+                ))}
+            </div>
+
+
+        </div>
     );
 }
 
