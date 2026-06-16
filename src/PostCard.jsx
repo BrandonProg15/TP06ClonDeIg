@@ -54,7 +54,6 @@ function PostCard() {
             <img
                 src={url}
                 alt="gato"
-                style={{ transform: 'rotate(-3deg)' }}
             />
 
             <div className="post-info">
