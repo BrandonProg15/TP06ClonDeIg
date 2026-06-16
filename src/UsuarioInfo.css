@@ -97,15 +97,6 @@
     transform: translateX(4px);
 }
 
-/* Responsive: hide sticky behavior on very small widths */
-@media (max-width:640px) {
-    .perfil {
-        position: relative;
-        width: 100%;
-        border-radius: 8px;
-    }
-}
-
 
 .botonPerfil {
     background: transparent;
